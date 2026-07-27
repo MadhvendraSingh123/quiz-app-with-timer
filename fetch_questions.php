@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$apiKey = "API_KEY_HERE";
+$apiKey = getenv('GROQ_API_KEY') ?: "";
 $apiUrl = "https://api.groq.com/openai/v1/chat/completions";
 
 $inputJSON = file_get_contents('php://input');
