@@ -102,7 +102,7 @@
         let currentIdx = 0;
         let score = 0;
         let timerInterval = null;
-        let timeLeft = 10;
+        let timeLeft = 15;
 
         const loadingScreen = document.getElementById('loadingScreen');
         const quizInterface = document.getElementById('quizInterface');

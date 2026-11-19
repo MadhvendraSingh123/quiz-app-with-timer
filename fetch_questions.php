@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-$apiKey = getenv('GROQ_API_KEY') ?: "";
-$apiUrl = "https://api.groq.com/openai/v1/chat/completions";
+$apiKey = getenv('apikeyy') ?: "";
+$apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent";
 
 $inputJSON = file_get_contents('php://input');
 $inputData = json_decode($inputJSON, true);
@@ -17,7 +17,7 @@ $systemPrompt = "You are a quiz generation assistant. Generate exactly 5 random 
               . "'question' (string), 'options' (array of 4 strings), and 'correct' (integer, index 0 to 3 corresponding to the correct option).";
 
 $postData = [
-    "model" => "llama-3.1-8b-instant",
+    "model" => "gemini-3.5-flash-lite",
     "messages" => [
         [
             "role" => "system",
